@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using UnityEngine.UIElements;
-using System.Diagnostics;
 
 public class UIPlayer : MonoBehaviour
 {
@@ -54,8 +53,7 @@ public class UIPlayer : MonoBehaviour
             Destroy(this.gameObject);
         }
 
-        Debug.Log("player instance has been registered: " + _playerInstance.gameObject.GetEntityId());
-
+    
         myInventory = new string[5];
         //this line of code preserves the gameobject through scene changes --------------------
         DontDestroyOnLoad(this.gameObject);
